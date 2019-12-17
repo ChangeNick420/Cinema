@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.IO;
 namespace Cinema
 {
 class Program
@@ -11,10 +11,14 @@ class Program
             string password;
             string rlogin;
             string rpassword;
-            string name = "";
+            string name = "";    
             int age;
             int i = 0;
-            string FilePath = @"C:\Users\5202616\source\repos\Cinema";
+            //StreamReader read = new StreamReader(@"C:\Users\5202616\source\repos\ChangeNick420\Cinema");
+            string FilePath = @"C:\Users\5202616\source\repos\ChangeNick420\Cinema";
+            string test=File.ReadAllText(@"C:\Users\5202616\source\repos\ChangeNick420\Cinema");
+            
+            foreach (string in line in line)
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Welcome to Gloucester Cinema.| \n________________________________________________________|");
             Console.WriteLine();
@@ -41,13 +45,15 @@ class Program
                     Console.Write("Age:");
                     age = Convert.ToInt32(Console.ReadLine());
                     i++;
-                    lines.Add(login, password, name, age);
-                    File.WriteAllLines(FilePath, lines);
+                    
+
+
+                    File.WriteAllText(FilePath, login, password, );
                 }
             } while (i == 0);
             Console.WriteLine("Hello {0}", name);
             Console.ReadLine();
-
+            
         }//main args
 }//program
 }//Namespace
